@@ -1,8 +1,20 @@
 services:
 
-  db: 
+  db:
+    image: postgres:17-alpine
     ports:
       - 15432:5432
+    env_file:
+      - .env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
 
   server:
     build:
@@ -13,7 +25,4 @@ services:
       - .server.dev.env
     volumes:
       - ./server/src:/usr/src/app/src
-    depends_on:
-      db:
-        condition: service_healthy
-        restart: true
+    
