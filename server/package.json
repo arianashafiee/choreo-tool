@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "0.9.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon -L src/index.js",
+    "reset": "node src/resetDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasnicklaus/cheer-choreo-tool.git"
+  },
+  "author": "Andreas Nicklaus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreasnicklaus/cheer-choreo-tool/issues"
+  },
+  "homepage": "https://www.choreo-planer.de",
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.42",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-basic-auth": "^1.2.1",
+    "express-status-monitor": "^1.3.4",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.16",
+    "pg": "^8.13.0",
+    "sequelize": "^6.37.3",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
