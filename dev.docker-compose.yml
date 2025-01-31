@@ -13,3 +13,7 @@ services:
       - .server.dev.env
     volumes:
       - ./server/src:/usr/src/app/src
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
