@@ -62,7 +62,7 @@ module.exports = defineConfig({
   },
   pluginOptions: {
     sitemap: {
-      baseURL: "https://www.choreo-planer.de",
+      baseURL: "https://www.choreoplaner.space",
       routes,
       trailingSlash: true,
       pretty: true,

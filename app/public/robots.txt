@@ -1,4 +1,4 @@
-sitemap: https://www.choreo-planer.de/sitemap.xml
+sitemap: https://www.choreoplaner.space/sitemap.xml
 
 User-agent: *
 Disallow:
